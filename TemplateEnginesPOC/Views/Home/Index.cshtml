@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Index</title>
+    <link href="~/Content/styles.css" rel="stylesheet" />
+    <!-- Put here your templates -->
+</head>
+<body>
+    <div id="RenderBody"></div>
+
+    <script src="~/Scripts/utils.js"></script>
+    <script src="~/Scripts/handlebars-v4.0.5.js"></script>
+    <script src="~/Scripts/underscore-min.js"></script>
+    <script src="~/Scripts/jquery-1.12.0.min.js"></script>
+
+    <script>
+        $(function () {
+            $.get("/data.json", function (data) {
+
+                var stopWatch = new Stopwatch();
+                stopWatch.start();
+
+                //Put here your template demo code 
+
+                stopWatch.stop();
+
+                console.log("Elapsed time: %s", stopWatch.ElapsedTime);
+            });
+        });
+    </script>
+</body>
+</html>
