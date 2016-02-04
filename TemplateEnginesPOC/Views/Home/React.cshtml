@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Index</title>
+    <link href="~/Content/styles.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <div id="RenderBody"></div>
+    <script src="~/Scripts/jquery-1.12.0.min.js"></script>
+    <script src="~/dist/ReactApp.js"></script>
+    <script src="~/Scripts/utils.js"></script>
+    <script>
+        $(function () {
+            $.get("/data.json", function (data) {
+
+                var stopWatch = new Stopwatch();
+                stopWatch.start();
+
+                ReactApp.RenderApp(data.SampleData);
+
+                stopWatch.stop();
+
+                console.log("Elapsed time: %s", stopWatch.ElapsedTime);
+            });
+        });
+    </script>
+</body>
+</html>

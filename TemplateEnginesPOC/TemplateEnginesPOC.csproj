@@ -90,12 +90,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\styles.css" />
+    <Content Include="dist\ReactApp.js" />
     <Content Include="Global.asax" />
+    <None Include="Scripts\Components\app.jsx" />
+    <None Include="Scripts\Components\Row.jsx" />
     <Content Include="Scripts\handlebars-v4.0.5.js" />
     <Content Include="Scripts\jquery-1.12.0.min.js" />
     <Content Include="Scripts\underscore-min.js" />
     <Content Include="Scripts\utils.js" />
     <Content Include="Web.config" />
+    <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -110,6 +114,8 @@
     <Content Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="data.json" />
+    <Content Include="package.json" />
+    <Content Include="Views\Home\React.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

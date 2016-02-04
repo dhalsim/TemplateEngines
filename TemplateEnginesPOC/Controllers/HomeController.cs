@@ -8,5 +8,10 @@
         {
             return View();
         }
+
+        public ActionResult React()
+        {
+            return View();
+        }
     }
 }
